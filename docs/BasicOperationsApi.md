@@ -29,10 +29,9 @@ Modify the request path of a specific URL rewrite configuration.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_change_url_rewrite_request_path_request import UrlmanagerChangeUrlRewriteRequestPathRequest
 from urlmanager.rest import ApiException
@@ -48,6 +47,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -79,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -106,10 +111,9 @@ Modify the request path of a specific URL rewrite configuration.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_change_url_rewrite_request_path_request import UrlmanagerChangeUrlRewriteRequestPathRequest
 from urlmanager.rest import ApiException
@@ -125,6 +129,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -156,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -183,10 +193,9 @@ Create a new URL rewrite configuration with customizable rules.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_create_url_rewrite_request import UrlmanagerCreateUrlRewriteRequest
 from urlmanager.models.urlmanager_url_rewrite import UrlmanagerUrlRewrite
@@ -203,6 +212,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -234,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -261,10 +276,9 @@ Create a new URL rewrite configuration with customizable rules.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_create_url_rewrite_request import UrlmanagerCreateUrlRewriteRequest
 from urlmanager.models.urlmanager_url_rewrite import UrlmanagerUrlRewrite
@@ -281,6 +295,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -312,7 +332,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -339,10 +359,9 @@ Delete an existing URL rewrite configuration.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_delete_url_rewrite_request import UrlmanagerDeleteUrlRewriteRequest
 from urlmanager.rest import ApiException
@@ -358,6 +377,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -389,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -416,10 +441,9 @@ Delete an existing URL rewrite configuration.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_delete_url_rewrite_request import UrlmanagerDeleteUrlRewriteRequest
 from urlmanager.rest import ApiException
@@ -435,6 +459,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -466,7 +496,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -493,10 +523,9 @@ Retrieve the details of a specific URL rewrite configuration.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_get_url_rewrite_request import UrlmanagerGetUrlRewriteRequest
 from urlmanager.models.urlmanager_url_rewrite import UrlmanagerUrlRewrite
@@ -513,6 +542,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -544,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -571,10 +606,9 @@ Retrieve the details of a specific URL rewrite configuration.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_get_url_rewrite_request import UrlmanagerGetUrlRewriteRequest
 from urlmanager.models.urlmanager_url_rewrite import UrlmanagerUrlRewrite
@@ -591,6 +625,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -622,7 +662,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -649,10 +689,9 @@ Retrieve a list of all URL rewrite configurations in your application.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_list_url_rewrites_request import UrlmanagerListUrlRewritesRequest
 from urlmanager.models.urlmanager_list_url_rewrites_response import UrlmanagerListUrlRewritesResponse
@@ -669,6 +708,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -700,7 +745,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -727,10 +772,9 @@ Retrieve a list of all URL rewrite configurations in your application.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_list_url_rewrites_request import UrlmanagerListUrlRewritesRequest
 from urlmanager.models.urlmanager_list_url_rewrites_response import UrlmanagerListUrlRewritesResponse
@@ -747,6 +791,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -778,7 +828,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -805,10 +855,9 @@ Retrieve URL rewrite configurations based on target paths.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_list_url_rewrites_by_target_paths_request import UrlmanagerListUrlRewritesByTargetPathsRequest
 from urlmanager.rest import ApiException
@@ -824,6 +873,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -855,7 +910,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -882,10 +937,9 @@ Retrieve URL rewrite configurations based on target paths.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_list_url_rewrites_by_target_paths_request import UrlmanagerListUrlRewritesByTargetPathsRequest
 from urlmanager.rest import ApiException
@@ -901,6 +955,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -932,7 +992,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -959,10 +1019,9 @@ Resolve and retrieve the rewritten URL for a given input URL.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_resolve_url_rewrite_request import UrlmanagerResolveUrlRewriteRequest
 from urlmanager.models.urlmanager_url_rewrite import UrlmanagerUrlRewrite
@@ -979,6 +1038,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -1010,7 +1075,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1037,10 +1102,9 @@ Resolve and retrieve the rewritten URL for a given input URL.
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import urlmanager
 from urlmanager.models.urlmanager_resolve_url_rewrite_request import UrlmanagerResolveUrlRewriteRequest
 from urlmanager.models.urlmanager_url_rewrite import UrlmanagerUrlRewrite
@@ -1057,6 +1121,12 @@ configuration = urlmanager.Configuration(
 # in accordance with the API server security policy.
 # Examples for each auth method are provided below, use the example that
 # satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with urlmanager.ApiClient(configuration) as api_client:
@@ -1088,7 +1158,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 

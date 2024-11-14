@@ -18,28 +18,25 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel
-from pydantic import Field
 from urlmanager.models.urlmanager_url_rewrite import UrlmanagerUrlRewrite
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class UrlmanagerListUrlRewritesByTargetPathsResponse(BaseModel):
     """
     UrlmanagerListUrlRewritesByTargetPathsResponse
     """ # noqa: E501
     url_rewrites: Optional[List[UrlmanagerUrlRewrite]] = Field(default=None, alias="urlRewrites")
+    additional_properties: Dict[str, Any] = {}
     __properties: ClassVar[List[str]] = ["urlRewrites"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -52,7 +49,7 @@ class UrlmanagerListUrlRewritesByTargetPathsResponse(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of UrlmanagerListUrlRewritesByTargetPathsResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -65,24 +62,33 @@ class UrlmanagerListUrlRewritesByTargetPathsResponse(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
+        * Fields in `self.additional_properties` are added to the output dict.
         """
+        excluded_fields: Set[str] = set([
+            "additional_properties",
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of each item in url_rewrites (list)
         _items = []
         if self.url_rewrites:
-            for _item in self.url_rewrites:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_url_rewrites in self.url_rewrites:
+                if _item_url_rewrites:
+                    _items.append(_item_url_rewrites.to_dict())
             _dict['urlRewrites'] = _items
+        # puts key-value pairs in additional_properties in the top level
+        if self.additional_properties is not None:
+            for _key, _value in self.additional_properties.items():
+                _dict[_key] = _value
+
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of UrlmanagerListUrlRewritesByTargetPathsResponse from a dict"""
         if obj is None:
             return None
@@ -91,8 +97,13 @@ class UrlmanagerListUrlRewritesByTargetPathsResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "urlRewrites": [UrlmanagerUrlRewrite.from_dict(_item) for _item in obj.get("urlRewrites")] if obj.get("urlRewrites") is not None else None
+            "urlRewrites": [UrlmanagerUrlRewrite.from_dict(_item) for _item in obj["urlRewrites"]] if obj.get("urlRewrites") is not None else None
         })
+        # store additional fields in additional_properties
+        for _key in obj.keys():
+            if _key not in cls.__properties:
+                _obj.additional_properties[_key] = obj.get(_key)
+
         return _obj
 
 
